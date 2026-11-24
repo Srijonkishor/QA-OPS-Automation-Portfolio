@@ -1,0 +1,6 @@
+material_id,operator_id,review_date,system_description,reviewer_description,review_status,status_code,entity_type,subject_category,confidence_score,language,region,source,description_too_short,missing_subject_category,low_confidence,is_rejected
+MAT-0001,operator_001,2026-11-20,Entity label predicted as valid,Incorrect entity label selected,rejected,3,product,label_mismatch,0.82,en,sample_region_a,mock_source,False,False,False,True
+MAT-0002,operator_002,2026-11-20,Description generated successfully for review item,Output accepted after manual review,published,2,creator,accepted_output,0.91,en,sample_region_b,mock_source,False,False,False,False
+MAT-0003,operator_003,2026-11-21,Short,Generated description is too short and lacks context,rejected,3,video,description_quality,0.66,en,sample_region_a,mock_source,True,False,True,True
+MAT-0004,operator_004,2026-11-21,Entity detected with moderate confidence,Missing subject category during manual check,rejected,3,product,,0.58,en,sample_region_c,mock_source,False,True,True,True
+MAT-0005,operator_005,2026-11-22,System output accepted for entity classification,No issue found,published,2,creator,accepted_output,0.88,en,sample_region_b,mock_source,False,False,False,False

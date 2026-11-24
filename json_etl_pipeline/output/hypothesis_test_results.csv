@@ -1,0 +1,4 @@
+hypothesis,test_field,total_flagged_records,rejected_flagged_records,rejection_rate_when_flagged
+Rejected cases are more common when system descriptions are too short.,description_too_short,1,1,1.0
+Missing subject category increases rejected-case risk.,missing_subject_category,1,1,1.0
+Low confidence records require closer review.,low_confidence,2,2,1.0
