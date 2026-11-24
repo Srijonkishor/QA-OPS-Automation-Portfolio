@@ -1,0 +1,5 @@
+subject_category,readable_category,priority
+label_mismatch,Label Mismatch,high
+description_quality,Description Quality Issue,high
+accepted_output,Accepted Output,medium
+,Missing Subject Category,high
