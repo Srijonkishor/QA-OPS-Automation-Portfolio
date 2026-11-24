@@ -1,0 +1,112 @@
+[
+  {
+    "material_id": "MAT-0001",
+    "operator_id": "operator_001",
+    "review_date": "2026-11-20",
+    "review_payload": {
+      "system_result": {
+        "description": "Entity label predicted as valid",
+        "confidence_score": 0.82,
+        "entity_type": "product"
+      },
+      "reviewer_result": {
+        "description": "Incorrect entity label selected",
+        "status_code": 3,
+        "subject_category": "label_mismatch"
+      },
+      "metadata": {
+        "language": "en",
+        "region": "sample_region_a",
+        "source": "mock_source"
+      }
+    }
+  },
+  {
+    "material_id": "MAT-0002",
+    "operator_id": "operator_002",
+    "review_date": "2026-11-20",
+    "review_payload": {
+      "system_result": {
+        "description": "Description generated successfully for review item",
+        "confidence_score": 0.91,
+        "entity_type": "creator"
+      },
+      "reviewer_result": {
+        "description": "Output accepted after manual review",
+        "status_code": 2,
+        "subject_category": "accepted_output"
+      },
+      "metadata": {
+        "language": "en",
+        "region": "sample_region_b",
+        "source": "mock_source"
+      }
+    }
+  },
+  {
+    "material_id": "MAT-0003",
+    "operator_id": "operator_003",
+    "review_date": "2026-11-21",
+    "review_payload": {
+      "system_result": {
+        "description": "Short",
+        "confidence_score": 0.66,
+        "entity_type": "video"
+      },
+      "reviewer_result": {
+        "description": "Generated description is too short and lacks context",
+        "status_code": 3,
+        "subject_category": "description_quality"
+      },
+      "metadata": {
+        "language": "en",
+        "region": "sample_region_a",
+        "source": "mock_source"
+      }
+    }
+  },
+  {
+    "material_id": "MAT-0004",
+    "operator_id": "operator_004",
+    "review_date": "2026-11-21",
+    "review_payload": {
+      "system_result": {
+        "description": "Entity detected with moderate confidence",
+        "confidence_score": 0.58,
+        "entity_type": "product"
+      },
+      "reviewer_result": {
+        "description": "Missing subject category during manual check",
+        "status_code": 3,
+        "subject_category": ""
+      },
+      "metadata": {
+        "language": "en",
+        "region": "sample_region_c",
+        "source": "mock_source"
+      }
+    }
+  },
+  {
+    "material_id": "MAT-0005",
+    "operator_id": "operator_005",
+    "review_date": "2026-11-22",
+    "review_payload": {
+      "system_result": {
+        "description": "System output accepted for entity classification",
+        "confidence_score": 0.88,
+        "entity_type": "creator"
+      },
+      "reviewer_result": {
+        "description": "No issue found",
+        "status_code": 2,
+        "subject_category": "accepted_output"
+      },
+      "metadata": {
+        "language": "en",
+        "region": "sample_region_b",
+        "source": "mock_source"
+      }
+    }
+  }
+]
