@@ -1,8 +1,0 @@
-Operational review logs are often stored as nested JSON payloads. These payloads are useful but difficult for analysts and stakeholders to read directly.
-
-This project solves that problem by converting raw JSON records into:
-
-- structured CSV outputs
-- validated field-level checks
-- hypothesis test results
-- readable case summaries
