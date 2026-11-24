@@ -1,0 +1,5 @@
+# JSON ETL Pipeline
+
+This project demonstrates an ETL pipeline for processing nested JSON review logs commonly found in QA, Trust & Safety, moderation, and operational analytics workflows.
+
+The pipeline extracts raw JSON records, validates business assumptions, transforms nested fields into structured tabular data, and generates readable case summaries for non-technical stakeholders.
