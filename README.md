@@ -1,120 +1,100 @@
-# QA Operations Automation Portfolio
+# JSON ETL Review Log Parser
 
-This repository contains sanitized portfolio projects based on QA operations, Trust & Safety reporting, workflow automation, and data operations use cases.
+This module demonstrates a GitHub-friendly ETL pipeline for processing nested JSON review logs commonly found in QA operations, Trust & Safety workflows, moderation quality checks, and operational analytics.
 
-The projects demonstrate how manual QA workflows can be converted into structured, automation-backed data systems using SQL, Python, dashboards, formulas, lookup logic, and documentation.
+The pipeline extracts raw JSON records, validates business assumptions, transforms nested fields into structured tabular data, and generates readable case summaries for non-technical stakeholders.
 
-## Portfolio Focus
+## Problem Statement
 
-This repository focuses on:
+Operational review logs are often stored as nested JSON payloads. These payloads contain valuable information, but they are difficult to analyze directly because important values are hidden inside nested objects.
 
-- QA production tracking
-- QA sampling workflows
-- PM QC sample selection
-- Rejected-case repository logic
-- Leave capacity and shrinkage tracking
-- Dashboard metric definitions
-- Formula-driven reporting systems
-- Data validation and backfill logic
+This project converts raw JSON review logs into:
 
-## Projects Included
+- Clean CSV outputs
+- Hypothesis validation results
+- Data-quality checks
+- Readable case summaries
+- Dashboard-ready structured data
 
-### 1. Production Automation
+## Pipeline Flow
 
-Automates daily QA production tracking using previous-working-day logic, operator-level aggregation, schema validation, and duplicate-safe updates.
+```text
+Raw JSON review logs
+→ Extract records
+→ Flatten nested fields
+→ Validate business hypotheses
+→ Apply data-quality checks
+→ Export cleaned CSV
+→ Generate readable Markdown summaries
+```
 
-Key concepts:
+## Folder Structure
 
-- Previous working-day logic
-- Daily production count
-- Duplicate prevention
-- Table update logic
-- Backfill-friendly structure
-
----
-
-### 2. QA Sampling Engine
-
-Selects QA review samples using configurable sampling rules.
-
-Key concepts:
-
-- Random material selection
-- Fixed-count sampling
-- Percentage-based sampling
-- Duplicate material prevention
-- Category-aware sampling
-
----
-
-### 3. Case Repository Workflow
-
-Demonstrates how reviewed or rejected cases can be extracted, parsed, enriched, and stored in a structured case repository.
-
-Key concepts:
-
-- JSON parsing
-- Case enrichment
-- Review status classification
-- Repository-style tracking
-
----
-
-### 4. Leave Capacity Dashboard Logic
-
-Calculates QA leave capacity, expected workdays, actual workdays, shrinkage rate, and weekly summary messages.
-
-Key concepts:
-
-- Leave tracking
-- Holiday mapping
-- Shrinkage calculation
-- Workforce availability
-- Notification-ready summaries
-
----
-
-### 5. Dashboard Metrics Layer
-
-Documents reusable metric definitions for QA performance dashboards.
-
-Key metrics:
-
-- Daily production
-- Weekly production
-- QA accuracy
-- Pre-appeal accuracy
-- Post-appeal accuracy
-- Rejected-case rate
-- Target achievement
-- Shrinkage rate
+```text
+json_etl_pipeline/
+├── README.md
+├── data/
+│   ├── raw_review_logs.json
+│   └── policy_mapping.csv
+├── output/
+│   └── .gitkeep
+├── src/
+│   ├── extract.py
+│   ├── transform.py
+│   ├── validate.py
+│   ├── generate_summary.py
+│   └── run_pipeline.py
+├── docs/
+│   ├── data_dictionary.md
+│   ├── hypothesis_testing.md
+│   └── pipeline_flow.md
+└── tests/
+    └── test_transform.py
+```
 
 ## Skills Demonstrated
 
-- SQL logic design
+- JSON parsing
+- ETL pipeline design
 - Python scripting
-- Data operations
-- QA analytics
-- Workflow automation
-- Dashboard metric design
-- Business-day date logic
+- pandas data transformation
 - Data validation
-- Sampling logic
-- Operational documentation
+- Hypothesis testing
+- QA review log analysis
+- Readable summary generation
+- Trust & Safety analytics
+- Operational data cleaning
 
-## Disclaimer
+## Example Use Case
 
-This repository uses mock data and sanitized examples only.
+A QA or Trust & Safety team receives raw review logs in JSON format. Each record includes system predictions, reviewer decisions, metadata, and status codes.
 
-It does not contain:
+The pipeline converts those logs into structured records that can be used for:
 
-- Company confidential data
-- Internal table names
-- Internal dashboard links
-- Internal Base links
-- Employee information
-- Real material IDs
-- Production credentials
-- Proprietary business logic
+- QA reporting
+- Rejected-case analysis
+- Dashboard inputs
+- Reviewer feedback
+- Data-quality validation
+- Business-readable summaries
 
-All examples are simplified for public portfolio demonstration.
+## How To Run
+
+From the main repository root:
+
+```bash
+cd json_etl_pipeline
+python src/run_pipeline.py
+```
+
+Expected outputs:
+
+```text
+output/cleaned_review_logs.csv
+output/hypothesis_test_results.csv
+output/readable_case_summaries.md
+```
+
+## Data Privacy Note
+
+This project uses mock data only. It does not include confidential company data, internal review IDs, real material IDs, employee information, internal table names, internal links, or proprietary business logic.
